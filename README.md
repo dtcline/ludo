@@ -2,6 +2,10 @@
 
 ## Setting up dev environments
 
+Runtime dependencies will be stored in source control (Lua), but build-time dev dependencies will not (CMake, LuaRocks, busted, compilers, etc.).
+
+CMake will be used as the primary build tool, outputting Make files for GCC tools.  Platform-specific tools may be adopted in the future.
+
 ### Linux (Ubuntu 16.04)
 
 #### For lua
