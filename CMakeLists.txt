@@ -12,3 +12,17 @@ set_target_properties(lualib PROPERTIES OUTPUT_NAME "lua")
 set_source_files_properties(${lua_src_dir}/lua.c PROPERTIES LANGUAGE CXX)
 add_executable(lua ${lua_src_dir}/lua.c)
 target_link_libraries(lua lualib)
+
+# Possible other build method:
+#include(ExternalProject) # for building 3rd-party dependencies
+
+# build Lua
+#ExternalProject_Add(Lua
+#  URL ${ROOT}/deps/lua-${LUA_VERSION}.tar.gz
+#  UPDATE_COMMAND "" # kept to prevent update step from re-running every build
+#  SOURCE_DIR Lua
+#  CONFIGURE_COMMAND "" # prevent default configure step from running
+#  BINARY_DIR Lua
+#  BUILD_COMMAND make linux
+#  INSTALL_COMMAND make -e INSTALL_TOP=${ROOT}/deps/lua install
+#)
