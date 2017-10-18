@@ -22,9 +22,9 @@ CMake will be used as the primary build tool, outputting Make files for GCC tool
 
 ### Windows (Windows 7 64-bit)
 
-From build directory in ROOT:
+From build sub-directory in ROOT:
 1. cmake .. -G "MinGW Makefiles"
-2. mingw32-make
+2. cmake --build .
 produces liblua.a and lua.exe (just for verifying compilation of library)
 
 ### Linux (Ubuntu 16.04)
