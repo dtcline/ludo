@@ -1,2 +1,3 @@
 deps/lua/
 deps/luarocks/
+build/

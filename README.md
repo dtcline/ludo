@@ -6,6 +6,13 @@ Runtime dependencies will be stored in source control (Lua), but build-time dev 
 
 CMake will be used as the primary build tool, outputting Make files for GCC tools.  Platform-specific tools may be adopted in the future.
 
+### Windows (Windows 7 64-bit)
+
+From build directory in ROOT:
+1. cmake .. -G "MinGW Makefiles"
+2. mingw32-make
+produces liblua.a and lua.exe (just for verifying compilation of library)
+
 ### Linux (Ubuntu 16.04)
 
 #### For lua
