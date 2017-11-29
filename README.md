@@ -1,5 +1,9 @@
 # ludo
 
+Ludo is intended to be a set of interactive simulation development libraries for applications including but not limited to video games.  It is planned to include some engine implementations but for their use to be optional.
+
+The initial goal is to implement Entity Component System (ECS) functionality.  It is very likely that the ECS functionality will NOT be "pure" as advocated by some but instead will be an organic mash-up of what works and feels right.
+
 ## Dependencies
 
 Runtime dependencies will be stored in source control (Lua), but build-time dev dependencies will not (CMake, LuaRocks, busted, compilers, etc.).
