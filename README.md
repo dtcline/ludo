@@ -12,6 +12,7 @@ Runtime dependencies (tentative):
 - Lua: scripting language of choice though it will be transpiled from Moonscript
 - SFML: input, graphics, and audio
 - Bullet Physics: physics
+- JavaScript engine: SpiderMonkey, V8, DukTape, etc. for scripting
 
 Dev dependencies (adopted):
 - Git: source control
@@ -28,22 +29,41 @@ CMake will be used as the primary build tool, outputting Make files for GCC tool
 
 ### Windows (Windows 7 64-bit)
 
-From build sub-directory in ROOT:
-1. cmake .. -G "MinGW Makefiles"
-2. cmake --build .
+From "build" sub-directory in ROOT:
+1. `cmake .. -G "MinGW Makefiles"``
+2. `cmake --build .`
 produces liblua.a and lua.exe (just for verifying compilation of library)
+
+### OSX (High Sierra 10.13.6)
+
+#### For Lua
+
+From "build" sub-directory in ROOT:
+1. `cmake ..`
+2. `cmake --build .`
+produces liblua.a and lua (just for verifying compilation of library)
+
+#### For LuaRocks
+
+Using HomeBrew:
+1. `brew update`
+2. `brew install luarocks`
+
+#### For busted
+
+Using LuaRocks: `luarocks install busted`
 
 ### Linux (Ubuntu 16.04)
 
-#### For lua
+#### For Lua
 
 - Needed to install libreadline-dev via apt-get
 
-1. make linux
-2. make -e INSTALL_TOP=/home/dc/lua/lua-5.3.4
+1. `make linux`
+2. `make -e INSTALL_TOP=/home/dc/lua/lua-5.3.4`
 
-#### For luarocks
+#### For LuaRocks
 
-1. ./configure --prefix=/home/dc/lua/luarocks-2.4.2/install --force-config
-2. make build
-3. make install
+1. `./configure --prefix=/home/dc/lua/luarocks-2.4.2/install --force-config`
+2. `make build`
+3. `make install`
